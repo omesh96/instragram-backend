@@ -30,6 +30,10 @@ app.use("/user",userRouter)
 app.use("/post",postRouter)
 app.use("/profile",profileRouter)
 
+ app.use("/",(req,res)=>{
+  res.json("Welcome to sociogram")
+ })
+
   mongoose.connect(mongoURL)
 
   mongoose.connection.on("connected",()=>{ // connected same rahega double quote me
